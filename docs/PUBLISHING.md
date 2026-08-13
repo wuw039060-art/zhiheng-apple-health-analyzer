@@ -25,15 +25,15 @@ git status --short --ignored
 
 ## 2. 在 GitHub 建空仓库
 
-建议仓库名：`zhiheng-health`。
+建议仓库名：`zhiheng-apple-health-analyzer`。
 
 创建时：
 
 - 可见性选择 Public，黑客松评委才能直接打开；
 - 不勾选自动创建 README、`.gitignore` 或 License；本地已经有这些文件和说明；
-- Description 可填：`Privacy-first local Apple Health analytics for Windows, built with Tauri, Rust and React.`
+- Description 可填：`Apple Health & Apple Watch data analyzer for Windows — private, offline HealthKit export analysis with sleep, heart rate, HRV, activity and trend insights. | 知衡健康`
 
-建议 Topics：`apple-health`、`healthkit`、`tauri`、`rust`、`react`、`sqlite`、`privacy`、`digital-health`、`windows`。
+建议 Topics：`apple-health`、`apple-watch`、`healthkit`、`health-data`、`health-analytics`、`health-data-analysis`、`privacy-first`、`offline-first`、`digital-health`、`windows`、`tauri`、`rust`、`react`、`sqlite`。
 
 ## 3. 首次提交和推送
 
@@ -55,14 +55,14 @@ git status --short
 git diff --cached --stat
 git commit -m 'Initial release: ZhiHeng Health v1.3.2'
 git branch -M main
-git remote add origin https://github.com/YOUR_GITHUB_NAME/zhiheng-health.git
+git remote add origin https://github.com/YOUR_GITHUB_NAME/zhiheng-apple-health-analyzer.git
 git push -u origin main
 ```
 
 在 `git commit` 前检查：不应看到 `.reference`、健康 ZIP/XML/数据库或 `release/*.exe`。如果 `origin` 已存在，先运行 `git remote -v` 核对，不要重复添加；地址错误时使用：
 
 ```powershell
-git remote set-url origin https://github.com/YOUR_GITHUB_NAME/zhiheng-health.git
+git remote set-url origin https://github.com/YOUR_GITHUB_NAME/zhiheng-apple-health-analyzer.git
 ```
 
 ## 4. 创建 v1.3.2 Release

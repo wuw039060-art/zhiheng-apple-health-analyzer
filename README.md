@@ -2,6 +2,7 @@
   <img src="src-tauri/icons/icon.png" width="112" alt="知衡健康图标" />
   <h1>知衡健康 · ZhiHeng Health</h1>
   <p><strong>把 Apple 健康导出，变成可解释、可追溯、只留在本机的个人趋势报告。</strong></p>
+  <p><strong>Privacy-first Apple Health &amp; Apple Watch data analyzer for Windows.</strong></p>
   <p>Windows · Tauri 2 · Rust · React · TypeScript · SQLite · ECharts</p>
 </div>
 
