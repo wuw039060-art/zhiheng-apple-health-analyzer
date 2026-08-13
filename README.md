@@ -6,7 +6,7 @@
   <p>Windows · Tauri 2 · Rust · React · TypeScript · SQLite · ECharts</p>
 </div>
 
-> 参赛展示版本：`v1.3.2`。本项目用于个人健康数据整理与趋势沟通，不提供医学诊断，也不能替代医生。
+> 当前公开版本：`v1.3.2`。本项目用于个人健康数据整理与趋势沟通，不提供医学诊断，也不能替代医生。
 
 ## 项目简介
 
@@ -60,7 +60,7 @@ Apple 健康可以积累大量睡眠、心率、HRV、活动、血氧和锻炼�
 3. 在知衡健康中选择或拖入导出的 ZIP。
 4. 查看“每日、洞察、建议、数据、设置”五个页面，并切换日期与 7/30/90/180/365 天窗口。
 
-安装包内置 WebView2 离线运行时；当前未购买商业代码签名证书，因此 Windows SmartScreen 可能提示“未知发布者”。发布文件的 SHA-256 记录在 [`release/SHA256.txt`](release/SHA256.txt)。更完整的演示脚本见 [`docs/HACKATHON_DEMO.md`](docs/HACKATHON_DEMO.md)。
+安装包内置 WebView2 离线运行时；当前未购买商业代码签名证书，因此 Windows SmartScreen 可能提示“未知发布者”。发布文件的 SHA-256 记录在 [`release/SHA256.txt`](release/SHA256.txt)。
 
 ## 工作方式
 
@@ -103,7 +103,7 @@ flowchart LR
 src/                  React 界面、分析规则与前端单元测试
 src-tauri/src/        Rust 导入、数据库和聚合逻辑
 src-tauri/resources/  Windows 运行时依赖
-docs/                 模型、安全、发布和黑客松说明
+docs/                 公开算法规则、模型说明和版本说明
 scripts/              可复用的工作区维护命令
 release/              只提交校验文件；安装包放 GitHub Releases
 ```
@@ -126,7 +126,7 @@ npm run tauri -- dev
 npm run tauri -- build
 ```
 
-`npm run build` 只验证前端生产资源；最终桌面程序必须通过 Tauri 构建。任务结束可运行 `npm run clean:workspace` 删除可重建的依赖、缓存与构建产物。
+`npm run build` 只验证前端生产资源；最终桌面程序必须通过 Tauri 构建。完成本地开发后可运行 `npm run clean:workspace` 删除可重建的依赖、缓存与构建产物。
 
 ## 隐私与医疗安全
 
@@ -136,7 +136,7 @@ npm run tauri -- build
 - 当前版本无上传接口、账号系统或遥测；界面中的权威资料链接仅在用户主动打开时访问网络。
 - 软件不重新解释 ECG 波形，不建议自行停药或改药；紧急症状应直接联系当地急救服务。
 
-详细规则见 [`docs/CROSS_VALIDATION_RULES.md`](docs/CROSS_VALIDATION_RULES.md) 与 [`docs/PRODUCT_SAFETY_PLAN.md`](docs/PRODUCT_SAFETY_PLAN.md)。
+详细规则见 [`docs/CROSS_VALIDATION_RULES.md`](docs/CROSS_VALIDATION_RULES.md) 与 [`docs/STATE_AGE_MODEL.md`](docs/STATE_AGE_MODEL.md)。
 
 ## 验证状态
 
@@ -146,7 +146,7 @@ npm run tauri -- build
 - Windows x64 NSIS 离线安装、卸载、重新安装与首次启动已验证；
 - `v1.3.2` 安装包 SHA-256：`C6E75F7374E2D1396E7CFA59AEB18309A3FB4A221BCC0D24547AC0B6095416F4`。
 
-完整记录见 [`docs/WINDOWS_RELEASE.md`](docs/WINDOWS_RELEASE.md)。
+当前版本变化、安装方法和完整性校验见 [`docs/RELEASE_NOTES_V1.3.2.md`](docs/RELEASE_NOTES_V1.3.2.md)。
 
 ## 已知边界
 
@@ -158,12 +158,9 @@ npm run tauri -- build
 
 ## 项目资料
 
-- [`docs/HACKATHON_DEMO.md`](docs/HACKATHON_DEMO.md)：黑客松展示脚本与评委问答
-- [`docs/PRODUCT_SAFETY_PLAN.md`](docs/PRODUCT_SAFETY_PLAN.md)：产品、算法与医学安全方案
 - [`docs/CROSS_VALIDATION_RULES.md`](docs/CROSS_VALIDATION_RULES.md)：多指标交叉验证规则
 - [`docs/STATE_AGE_MODEL.md`](docs/STATE_AGE_MODEL.md)：状态年龄模型
-- [`docs/V3_PRODUCT_ARCHITECTURE.md`](docs/V3_PRODUCT_ARCHITECTURE.md)：桌面产品架构
-- [`docs/PUBLISHING.md`](docs/PUBLISHING.md)：GitHub 首次发布步骤
+- [`docs/RELEASE_NOTES_V1.3.2.md`](docs/RELEASE_NOTES_V1.3.2.md)：当前版本说明与安装包校验
 
 ## 许可证
 
