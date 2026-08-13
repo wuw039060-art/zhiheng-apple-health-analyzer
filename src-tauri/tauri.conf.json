@@ -1,0 +1,51 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "知衡健康",
+  "version": "1.3.2",
+  "identifier": "com.watchhealth.lens",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "知衡健康",
+        "width": 1440,
+        "height": 920,
+        "minWidth": 1180,
+        "minHeight": 720,
+        "center": true,
+        "resizable": true,
+        "dragDropEnabled": true,
+        "backgroundColor": "#f6f7f9"
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; img-src 'self' asset: http://asset.localhost; style-src 'self' 'unsafe-inline'; connect-src ipc: http://ipc.localhost"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": ["nsis"],
+    "resources": {
+      "resources/windows-x64/WebView2Loader.dll": "WebView2Loader.dll"
+    },
+    "category": "HealthcareAndFitness",
+    "shortDescription": "本地分析 Apple 健康导出数据",
+    "longDescription": "在本机导入 Apple 健康 ZIP 或 export.xml，生成趋势图并对心率、睡眠、活动和夜间生命体征进行交叉验证。",
+    "windows": {
+      "webviewInstallMode": {
+        "type": "offlineInstaller"
+      },
+      "nsis": {
+        "displayLanguageSelector": false,
+        "installerIcon": "icons/icon.ico",
+        "installMode": "currentUser",
+        "languages": ["SimpChinese", "English"]
+      }
+    }
+  }
+}
