@@ -2,7 +2,8 @@
 
 ## 成品
 
-- 文件：`release/知衡健康_1.3.2_Windows_x64_离线安装包.exe`
+- 本机文件：`release/知衡健康_1.3.2_Windows_x64_离线安装包.exe`
+- GitHub Release 附件：`ZhiHeng-Health_1.3.2_Windows_x64_Offline_Setup.exe`
 - 版本：1.3.2
 - 架构：Windows x64
 - 大小：210,057,631 字节

@@ -13,7 +13,7 @@
 
 ## 安装
 
-下载 `知衡健康_1.3.2_Windows_x64_离线安装包.exe` 后双击安装。安装包内置 WebView2 离线运行时，不要求用户安装 Node.js 或 Rust。
+下载 `ZhiHeng-Health_1.3.2_Windows_x64_Offline_Setup.exe` 后双击安装。安装包内置 WebView2 离线运行时，不要求用户安装 Node.js 或 Rust。
 
 当前安装包没有商业代码签名，Windows SmartScreen 可能显示“未知发布者”。
 
